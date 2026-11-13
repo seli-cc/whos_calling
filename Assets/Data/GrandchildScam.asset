@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a9e8fda518f45408b67a746f2705f1, type: 3}
+  m_Name: GrandchildScam
+  m_EditorClassIdentifier: Assembly-CSharp::CallData
+  callerName: Unknown Caller
+  openingMessage: "Hi Grandma, it's me! I've got a problem and urgently need \u20AC900.
+    Please don't tell anyone. Can you help me?"
+  startingNodeIndex: 0
+  nodes:
+  - message: "Hi Grandma, it's me! I've got a problem and urgently need \u20AC900.
+      Please don't tell anyone. Can you help me?"
+    options:
+    - optionText: Which grandchild are you?
+      nextNodeIndex: 1
+      scoreChange: 0
+      endsCall: 0
+      feedback: 
+    - optionText: "Why do you need \u20AC900 so urgently?"
+      nextNodeIndex: 2
+      scoreChange: 0
+      endsCall: 0
+      feedback: 
+    - optionText: Hang up
+      nextNodeIndex: -1
+      scoreChange: 10
+      endsCall: 1
+      feedback: 'Feedback: Good decision. You do not have to continue a suspicious
+        call. Verify the caller''s identity independently before responding to requests
+        for money.'
+  - message: Oh Grandma, come on, it's me! I changed my number. I'm in serious trouble
+      and don't have time to explain everything.
+    options:
+    - optionText: What's my name?
+      nextNodeIndex: 3
+      scoreChange: 0
+      endsCall: 0
+      feedback: 
+    - optionText: Okay, I'll send the money.
+      nextNodeIndex: -1
+      scoreChange: -10
+      endsCall: 1
+      feedback: 'Feedback: Risky decision. The caller has not verified their identity
+        and is using urgency to pressure you into sending money.'
+    - optionText: Hang Up
+      nextNodeIndex: -1
+      scoreChange: 10
+      endsCall: 1
+      feedback: 'Feedback: Good decision. The caller avoids identifying themselves
+        and pressures you to act quickly. Verify the situation independently.'
+  - message: I need the money immediately! I can't explain over the phone. Please
+      send it now. I promise I'll pay you back.
+    options:
+    - optionText: I'll call you back on the usual number.
+      nextNodeIndex: -1
+      scoreChange: 10
+      endsCall: 1
+      feedback: 'Feedback: Good decision. Contact your relative using a trusted number
+        you already have, not a number supplied by the caller.'
+    - optionText: I'll send it now.
+      nextNodeIndex: -1
+      scoreChange: -10
+      endsCall: 1
+      feedback: 'Feedback: Risky decision. Urgency and pressure are common warning
+        signs. Never send money before independently verifying the request.'
+    - optionText: Hang Up
+      nextNodeIndex: -1
+      scoreChange: 10
+      endsCall: 1
+      feedback: 'Feedback: Good decision. You avoided pressure to send money without
+        verification.'
+  - message: Why are you asking so many questions? It's really me! Please, I need
+      your help. Don't tell anyone about this.
+    options:
+    - optionText: I'll send the money.
+      nextNodeIndex: -1
+      scoreChange: -10
+      endsCall: 1
+      feedback: 'Feedback: Risky decision. The caller avoids verification and asks
+        you to keep the request secret.'
+    - optionText: I'll contact my family first.
+      nextNodeIndex: -1
+      scoreChange: 10
+      endsCall: 1
+      feedback: 'Feedback: Good decision. Independently contact a trusted family
+        member to verify the story before taking action.'
+    - optionText: Hang up
+      nextNodeIndex: -1
+      scoreChange: 10
+      endsCall: 1
+      feedback: 'Feedback: Good decision. You can end a call when someone pressures
+        you or refuses to verify their identity.'
+  - message: No, don't call anyone! There's no time. Just send the money to the account
+      I'm about to give you.
+    options:
+    - optionText: I'll verify this with my family.
+      nextNodeIndex: -1
+      scoreChange: 10
+      endsCall: 1
+      feedback: 'Feedback: Good decision. You chose independent verification instead
+        of obeying the caller''s pressure.'
+    - optionText: I'll send the money.
+      nextNodeIndex: -1
+      scoreChange: -10
+      endsCall: 1
+      feedback: 'Feedback: Risky decision. The caller discourages verification and
+        demands immediate payment.'
+    - optionText: Hang Up
+      nextNodeIndex: -1
+      scoreChange: 10
+      endsCall: 1
+      feedback: 'Feedback: Good decision. Do not transfer money until you have independently
+        confirmed the request.'
